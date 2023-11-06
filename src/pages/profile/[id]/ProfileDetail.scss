@@ -1,0 +1,34 @@
+@import '@/assets/styles/_global.scss';
+
+.ProfileDetail {
+  overflow: hidden;
+  padding: 0 0 4.8rem 0;
+
+  &-wrapper {
+    margin-bottom: 4.8rem;
+  }
+
+  .GalleryKol,
+  .InfoDetailKol,
+  .ContactCardKol,
+  .TabsKol,
+  .Tabs,
+  .ant-tabs,
+  .ant-tabs-content,
+  .TableSchedules {
+    height: 100%;
+  }
+
+  &-row {
+    @media (max-width: 1200px) {
+      &>.ant-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      row-gap: 16px !important;
+    }
+  }
+}

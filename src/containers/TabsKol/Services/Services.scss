@@ -1,0 +1,32 @@
+@import '@/assets/styles/_global.scss';
+
+.Services {
+  padding: 2.4rem;
+  border-radius: 2.4rem;
+  border: 1px solid rgba($white, 0.2);
+  background: $outer-space;
+
+  &-item {
+    column-gap: 1.2rem;
+
+    &-icon {
+      .Icon {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
+    }
+
+    &-info {
+      &-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $heather;
+      }
+
+      &-description {
+        font-size: 1.4rem;
+        color: $lynch;
+      }
+    }
+  }
+}

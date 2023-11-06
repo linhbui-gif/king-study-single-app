@@ -1,0 +1,312 @@
+@import '@/assets/styles/_global.scss';
+
+.KolCard {
+  position: relative;
+  border-radius: 2.4rem;
+  overflow: hidden;
+  border: 1.5px solid rgba($white, 0.15);
+  cursor: pointer;
+  transition: $common-transition;
+
+  &-loading {
+    width: 100%;
+
+    .ant-skeleton-title {
+      width: 100%;
+      margin: 0;
+      height: 38.5rem;
+    }
+  }
+
+  &.horizontal {
+    display: flex;
+    align-items: center;
+    padding: 2.4rem 2.4rem 6rem;
+    column-gap: 2.4rem;
+    background: $outer-space;
+
+    .KolCard {
+      &-verify {
+        &.light {
+          opacity: 1;
+        }
+      }
+
+      &-loading {
+        margin: -2.4rem;
+
+        .ant-skeleton-title {
+          width: calc(100% + 2.4rem * 2);
+          height: 30rem;
+        }
+      }
+
+      &-image {
+        flex: 0 0 17rem;
+        max-width: 17rem;
+        width: 17rem;
+        height: 30rem;
+        border-radius: 1.2rem;
+        overflow: hidden;
+        border: 1px solid rgba($white, 0.2);
+      }
+
+      &-info {
+        position: static;
+        flex: 1;
+        padding: 0;
+      }
+
+      &-name {
+        font-size: 2.4rem;
+
+        &::before {
+          top: 1.4rem;
+          left: -0.8rem;
+          width: 0.8rem;
+          height: 0.8rem;
+        }
+      }
+
+      &-play {
+        top: unset;
+        bottom: calc(2.4rem + 1.2rem);
+        left: calc(17rem + 2.4rem - 1.2rem);
+        transform: translateX(-100%);
+      }
+    }
+  }
+
+  &.hide-info {
+    .KolCard-verify {
+      opacity: 1;
+    }
+
+    &:hover {
+      .KolCard {
+        &-verify {
+          &.light {
+            opacity: 0;
+          }
+        }
+
+        &-info {
+          opacity: 1;
+        }
+      }
+    }
+
+    .KolCard {
+      &-info {
+        transition: $common-transition;
+        opacity: 0;
+      }
+    }
+  }
+
+  &:hover {
+    border-color: rgba(lighten($radical-red, 15%), 0.5);
+
+    .KolCard {
+      &-info {
+        &-overlay {
+          &.dark {
+            opacity: 0;
+          }
+
+          &.light {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &-image {
+    height: 38.5rem;
+    @include centerScaleImage;
+  }
+
+  &-badge {
+    position: absolute;
+    width: 12rem;
+    height: 2.4rem;
+    z-index: 3;
+    font-size: 1.2rem;
+    color: $white;
+    font-weight: 500;
+    top: 3.2rem;
+    right: 3.2rem;
+    column-gap: .2rem;
+    transform: translate(50%, -50%) rotate(45deg);
+    background: $radical-red;
+
+    &.promotion {
+      background: linear-gradient(90deg, #FF1B6D 0%, #7F1BFF 100%);
+    }
+
+    .Icon {
+      width: 1.6rem;
+      height: 1.6rem;
+      flex: 0 0 1.6rem;
+      max-width: 1.6rem;
+    }
+  }
+
+  &-play {
+    position: absolute;
+    width: 4.2rem;
+    height: 4.2rem;
+    top: 2rem;
+    left: 2rem;
+    z-index: 3;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+    @include centerOriginImage;
+  }
+
+  &-info {
+    @include fullAbsolute;
+    padding: 1rem 2rem;
+    z-index: 2;
+    pointer-events: none;
+
+    &.active {
+      pointer-events: unset;
+    }
+
+    &-wrapper {
+      position: relative;
+      z-index: 1;
+    }
+
+    &-overlay {
+      @include fullAbsolute;
+      transition: $common-transition;
+      pointer-events: none;
+
+      &.dark {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 39.34%, rgba(70, 64, 66, 0.71) 72.53%, #000 100%);
+      }
+
+      &.light {
+        opacity: 0;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 39.34%, rgba(160, 15, 67, 0.71) 72.53%, #970643 100%);
+      }
+    }
+  }
+
+  &-name {
+    position: relative;
+    font-size: 1.8rem;
+    color: $white;
+    font-weight: 600;
+    column-gap: .8rem;
+    margin-bottom: 0.4rem;
+
+    span {
+      font-family: 'Poppins', sans-serif;
+      @include ellipsis(1);
+    }
+
+    &.online {
+      &::before {
+        position: absolute;
+        content: '';
+        left: -0.4rem;
+        transform: translateX(-100%);
+        border-radius: 50%;
+        background: $screamin-green;
+        top: 1rem;
+        width: 0.6rem;
+        height: 0.6rem;
+      }
+    }
+  }
+
+  &-description {
+    font-size: 1.4rem;
+    color: $heather;
+    height: 11rem;
+    @include ellipsis(5);
+  }
+
+  &-country,
+  &-rank {
+    width: 2.2rem;
+    height: 2.2rem;
+    flex: 0 0 2.2rem;
+    max-width: 2.2rem;
+    @include centerOriginImage;
+  }
+
+  &-age {
+    font-size: 1.4rem;
+    color: rgba($white, 0.8);
+    column-gap: .8rem;
+    margin-bottom: 0.8rem;
+    @include ellipsis(1);
+  }
+
+  &-detail {
+    column-gap: 1.2rem;
+
+    &-item {
+      position: relative;
+      column-gap: .4rem;
+      font-size: 1.2rem;
+      color: $white;
+      opacity: 0.8;
+      white-space: nowrap;
+
+      .Icon {
+        width: 2rem;
+        height: 2rem;
+        flex: 0 0 2rem;
+        max-width: 2rem;
+      }
+    }
+  }
+
+  &-verify {
+    column-gap: .4rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: $white;
+    margin: 1.2rem 0 -.2rem;
+    font-family: 'Poppins', sans-serif;
+    pointer-events: none;
+    transition: $common-transition;
+    z-index: 2;
+
+    &.light {
+      position: absolute;
+      width: 100%;
+      padding: .8rem 2rem;
+      bottom: 0;
+      margin: 0;
+      left: 0;
+      color: $shark;
+      background: linear-gradient(93deg, #FFF -12.67%, rgba(255, 255, 255, 0.43) 119.22%);
+      backdrop-filter: blur(5px);
+      opacity: 0;
+    }
+
+    img {
+      width: 2.2rem;
+      height: 2.2rem;
+      flex: 0 0 2.2rem;
+      max-width: 2.2rem;
+      @include centerOriginImage;
+    }
+  }
+
+  &-btn {
+    .Button {
+      .ant-btn {
+        padding: 0;
+      }
+    }
+  }
+}
