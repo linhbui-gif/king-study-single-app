@@ -161,7 +161,6 @@ const Icon: React.FC<TIconProps> = ({ name, className, color, style, onClick }) 
         return <Reload color={color} />;
       case EIconName.Wifi:
         return <Wifi color={color} />;
-
       default:
         return <></>;
     }

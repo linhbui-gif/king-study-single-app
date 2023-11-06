@@ -5,15 +5,15 @@
   .ant-input-affix-wrapper:focus,
   .ant-input-affix-wrapper-focused,
   .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
-    border-color: $outer-space;
+    border-color: #c4c4c4;
   }
 
   .ant-input-affix-wrapper {
     height: 4.4rem;
     padding: .4rem 1.2rem;
     border-radius: .8rem;
-    border: 1px solid $outer-space;
-    background: $shark;
+    border: 1px solid #c4c4c4;
+    background: $white;
     box-shadow: none;
 
     .ant-input {
@@ -45,15 +45,11 @@
 
   .ant-input {
     font-size: 1.6rem;
-    color: $white;
-    border: 1px solid $outer-space;
+    color: $black;
+    border: 1px solid #c4c4c4;
     height: 4.4rem;
-    background: $shark;
+    background: $white;
     border-radius: .8rem;
     box-shadow: none;
-
-    &::placeholder {
-      color: $pale-sky;
-    }
   }
 }
