@@ -7,6 +7,7 @@ import Button, { EButtonStyleType } from '@/components/Button';
 import { EIconColor, EIconName } from '@/components/Icon';
 
 import { TGuestLayoutProps } from './GuestLayout.types';
+import Navigation from "@/containers/Header/Navigation";
 
 const GuestLayout: React.FC<TGuestLayoutProps> = ({ children }) => {
   const [isShowBtnOnTop, setIsShowBtnOnTop] = useState<boolean>(false);
@@ -32,6 +33,7 @@ const GuestLayout: React.FC<TGuestLayoutProps> = ({ children }) => {
     <div className="GuestLayout">
       <div className="GuestLayout-header">
         <Header />
+        <Navigation />
       </div>
       <div className="GuestLayout-body">{children}</div>
       <div className="GuestLayout-footer">

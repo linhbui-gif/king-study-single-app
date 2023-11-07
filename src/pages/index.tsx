@@ -2,22 +2,18 @@ import React from 'react';
 
 import SEO from '@/components/SEO';
 import GuestLayout from '@/layouts/GuestLayout';
-import CarouselKolCards from '@/containers/CarouselKolCards';
-import HighlightKol from '@/containers/HighlightKol';
-import FindKol from '@/containers/FindKol';
 import { useRouter } from 'next/router';
+import CarouselHome from "@/containers/CarouselHome";
+import FilterHome from "@/containers/FilterHome/FilterHome";
 
 const Home = () => {
   const router = useRouter();
 
   return (
     <div className="Home">
-      <div className="container">
-        <div className="Home-wrapper">
-          <CarouselKolCards />
-          <HighlightKol />
-          <FindKol />
-        </div>
+      <div className="Home-wrapper">
+        <CarouselHome />
+        <FilterHome />
       </div>
     </div>
   );

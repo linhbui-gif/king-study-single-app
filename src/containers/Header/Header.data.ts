@@ -1,21 +1,39 @@
-import { Paths } from '@/routers/constants';
+import {Paths} from '@/routers/constants';
 
 export const dataHeaderMenu = (data: any) => [
   {
     id: 'home',
-    title: data?.trans?.header?.home,
+    title: "Giới thiệu",
     link: Paths.Home,
     activePaths: [Paths.Home],
   },
   {
     id: 'faq',
-    title: data?.trans?.header?.faq,
+    title: "Tin tức & Sự Kiện",
     link: '',
     activePaths: [],
   },
   {
     id: 'support',
-    title: data?.trans?.header?.support,
+    title: "Quốc gia du học",
+    link: '',
+    activePaths: [],
+  },
+  {
+    id: 'support',
+    title: "Học bổng",
+    link: '',
+    activePaths: [],
+  },
+  {
+    id: 'support',
+    title: "Dịch vụ",
+    link: '',
+    activePaths: [],
+  },
+  {
+    id: 'support',
+    title: "Liên Hệ",
     link: '',
     activePaths: [],
   },

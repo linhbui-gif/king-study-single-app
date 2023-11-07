@@ -42,7 +42,20 @@
       }
     }
   }
-
+  &.GRADIENT_BLUE{
+    .ant-btn{
+      background: $gradient-blue;
+      border: none;
+      color: $white;
+    }
+  }
+  &.GRADIENT_ORANGE{
+    .ant-btn{
+      background: $gradient-orange;
+      border: none;
+      color: $white;
+    }
+  }
   &.LIMED_SPRUCE {
     .ant-btn {
       border: 1px solid rgba($white, 0.2);

@@ -45,7 +45,7 @@ const Carousels: React.FC<TCarouselsProps> = ({
     autoplay,
     slidesPerRow,
     adaptiveHeight,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 1000,
     slidesToShow,
     slidesToScroll,
     focusOnSelect,

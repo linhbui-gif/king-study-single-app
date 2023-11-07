@@ -4,20 +4,20 @@
   padding: 2.4rem 0;
   transition: $common-transition;
 
-  &.small {
-    padding: 0;
-  }
-
   &-wrapper {
     padding: 1.2rem;
     margin: 0 -1.2rem;
-    border-radius: 1.2rem;
-    background: linear-gradient(270deg, #354058 -429.6%, rgba(99, 127, 151, 0.00) 100%);
-    backdrop-filter: blur(1.2rem);
+    //border-radius: 1.2rem;
+    //background: linear-gradient(270deg, #354058 -429.6%, rgba(99, 127, 151, 0.00) 100%);
+    //backdrop-filter: blur(1.2rem);
+    .ant-row > .ant-col:nth-child(2){
+      padding: 0 15px;
+      max-width: 78rem;
+    }
   }
 
   &-logo {
-    width: 17.6rem;
+    width: 26rem;
     height: 4.8rem;
     @include centerOriginImage;
   }
@@ -36,14 +36,21 @@
       }
 
       a {
-        color: inherit;
+        padding: 2.6rem 0;
+        line-height: 1;
+        color: #fff;
+        text-transform: uppercase;
+        transition: .3s ease;
+        font-size: 1.8rem;
+        font-weight: 700;
+        cursor: pointer;
         display: block;
       }
     }
   }
 
   .Input {
-    width: 18rem;
+    width: 100%;
   }
 
   &-account {
@@ -89,4 +96,7 @@
     font-family: 'Poppins', sans-serif;
     color: $white;
   }
+}
+.Navigation{
+  background: $gradient-blue;
 }
