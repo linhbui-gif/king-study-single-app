@@ -1,15 +1,51 @@
 .Review{
+  padding: 6rem 0;
+  background: linear-gradient(180deg, #1d2d47 0, #1e397e 100%);
+  .Title{
+    color: white;
+  }
   &-carousel{
+    &-col{
+      padding: 0 10px;
+    }
     &-item{
+      padding: 2.8rem 3.2rem;
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, .1);
+      flex-wrap: wrap;
       &-image{
-        max-width: 8.7rem;
-        height: 8.7rem;
+        margin-bottom: 2.6rem;
+        display: flex;
+        align-items: center;
         img{
           border-radius: 50%;
           width: 100%;
-          height: 100%;
           display: block;
           margin-right: 1.8rem;
+          max-width: 8.7rem;
+          height: 8.7rem;
+        }
+      }
+      &-text{
+        flex: 1;
+         &-title{
+           font-size: 2rem;
+           font-weight: 700;
+           color: #000;
+           margin-bottom: 0.4rem;
+         }
+        &-desc{
+          font-size: 2rem;
+          color: #000;
+          font-weight: 400;
+          margin-bottom: 1.2rem;
+        }
+      }
+      &-info{
+        &-desc{
+          font-size: 2rem;
+          color: #272425;
         }
       }
     }
