@@ -5,6 +5,10 @@ import GuestLayout from '@/layouts/GuestLayout';
 import { useRouter } from 'next/router';
 import CarouselHome from "@/containers/CarouselHome";
 import FilterHome from "@/containers/FilterHome/FilterHome";
+import About from "@/containers/About";
+import Contact from "@/containers/Contact";
+import Country from "@/containers/Country";
+import Review from "@/containers/Review";
 
 const Home = () => {
   const router = useRouter();
@@ -14,6 +18,10 @@ const Home = () => {
       <div className="Home-wrapper">
         <CarouselHome />
         <FilterHome />
+        <About />
+        <Contact />
+        <Country />
+        <Review />
       </div>
     </div>
   );
