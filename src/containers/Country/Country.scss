@@ -1,6 +1,9 @@
 .Country{
   padding: 5rem 0;
   &-item{
+    &-image{
+      height: 313px;
+    }
     img{
       width: 100%;
       display: block;

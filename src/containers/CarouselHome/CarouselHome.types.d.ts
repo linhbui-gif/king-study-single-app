@@ -1,1 +1,4 @@
-export type TCarouselHomeProps = unknown;
+export type TCarouselHomeProps = {
+  loading?:boolean,
+  data?: any
+};

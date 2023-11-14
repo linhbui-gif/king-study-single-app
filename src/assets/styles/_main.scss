@@ -242,3 +242,20 @@ body {
     justify-content: flex-start;
   }
 }
+.Loading{
+  width: 100%;
+  height: 50rem;
+  .ant-skeleton-title {
+    width: 100%;
+    margin: 0;
+    height: 50rem;
+  }
+}
+.ant-skeleton-element{
+  width: 100%;
+  height: 100%;
+  .ant-skeleton-image{
+    width: 100%;
+    height: 100%;
+  }
+}

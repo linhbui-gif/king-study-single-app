@@ -5,6 +5,7 @@ const env = {
   api: {
     baseUrl: {
       service: process.env.NEXT_PUBLIC_SERVICE_BASE_URL ?? '',
+      backend: process.env.NEXT_PUBLIC_DOMAIN_BACKEND_URL ?? '',
     },
   },
   cookie: {

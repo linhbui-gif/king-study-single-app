@@ -28,7 +28,6 @@
   }
 
   &-item {
-    padding: 0 1.2rem;
     height: 72rem;
     position: relative;
     img{
@@ -37,8 +36,12 @@
       -o-object-fit: cover;
       object-fit: cover;
       -o-object-position: center;
-      object-position: center;
       margin: auto;
+      position: absolute;
+      z-index: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-position: left;
     }
   }
 }
