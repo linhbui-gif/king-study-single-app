@@ -74,7 +74,7 @@ const SchoolList = ({loading, data}: any) => {
                               {element['country']['name']}
                             </div>
                             <div className={`SchoolList-wrapper-item-block-info-bottom-tag ${element?.type_school == 3 ? 'Available' : element?.type_school == 2 ? 'Partner' : 'Close'}`}>
-                              Partner
+                              {element?.type_school == 3 ? 'Available' : element?.type_school == 2 ? 'Partner' : 'Close'}
                             </div>
                           </div>
                         </div>
