@@ -7,6 +7,9 @@
     }
     &-item{
       &-image{
+        .ant-skeleton-element{
+          height: 22.9rem;
+        }
         img{
           width: 100%;
           display: block;

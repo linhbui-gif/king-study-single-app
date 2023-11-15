@@ -9,7 +9,7 @@ const Country: React.FC<TCountryHomeProps> = ({ loading, data }) => {
   const dataContent = data?.items
   const Loading = () => {
     return (
-      <Row gutter={[16,16]} flex={"wrap"}>
+      <Row gutter={[16,16]}>
         <Col span={24}>
           <Typography.Title className={"Title"} level={2}><Skeleton.Input active size={"small"} /></Typography.Title>
         </Col>
@@ -34,7 +34,7 @@ const Country: React.FC<TCountryHomeProps> = ({ loading, data }) => {
     <section className={"Country"}>
       <div className={"container"}>
         {loading && Loading()}
-        {!loading && <Row gutter={[16, 16]} flex={"wrap"}>
+        {!loading && <Row gutter={[16, 16]}>
           <Col span={24}>
             <Typography.Title className={"Title"} level={2}>QUỐC GIA DU HỌC</Typography.Title>
           </Col>

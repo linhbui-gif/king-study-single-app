@@ -13,34 +13,48 @@ import Event from "@/containers/Event";
 import {EGetCommonAction, getCommonAction} from "@/redux/actions";
 import {useDispatch, useSelector} from "react-redux";
 import {TRootState} from "@/redux/reducers";
-import {Skeleton, Spin} from "antd";
+import axios from "axios";
+import ApiService from "@/services/api";
 
-const Home = () => {
+const Home = ({ initialData }:any) => {
   const dispatch = useDispatch();
   const router = useRouter();
-  const getListCommon= useCallback(() => {
+  const getListCommon = useCallback(() => {
     dispatch(getCommonAction.request({}));
   }, [dispatch]);
   const loading = useSelector((state: TRootState) => state.loadingReducer[EGetCommonAction.GET_COMMON]);
   const data = useSelector((state:TRootState) => state.CommonReducer.getCommonResponse);
   useEffect(() => {
-    getListCommon();
-  }, [dispatch, getListCommon]);
+    if(initialData){
+      dispatch(getCommonAction.success(initialData))
+    } else {
+      getListCommon();
+    }
+  }, [dispatch, getListCommon, initialData]);
   return (
     <div className="Home">
       <div className="Home-wrapper">
-        <CarouselHome loading={true} data={data}/>
+        <CarouselHome loading={loading} data={data}/>
         <FilterHome />
-        <About loading={true} data={data}/>
-        <Contact loading={true} data={data}/>
-        <Country loading={true} data={data} />
-        <Review loading={loading}/>
-        <Event loading={loading} />
+        <About loading={loading} data={data}/>
+        <Contact loading={loading} data={data}/>
+        <Country loading={loading} data={data} />
+        <Review loading={loading} data={data}/>
+        <Event loading={loading} data={data} />
       </div>
     </div>
   );
 };
+export const getServerSideProps = async () => {
+  const response = await ApiService.get('/common',{});
+  const initialData = response.data.data;
 
+  return {
+    props: {
+      initialData,
+    },
+  };
+};
 export default Home;
 
 Home.getLayout = function (page: React.ReactNode) {
