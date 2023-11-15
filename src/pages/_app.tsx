@@ -26,12 +26,6 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
   const editorRef = useRef<any>();
   const getLayout = AnyComponent.getLayout ?? ((page: React.ReactElement) => page);
 
-  useEffect(() => {
-    editorRef.current = {
-      ClassicEditor: require('ckeditor5-build/build/ckeditor'),
-    };
-  }, []);
-
   return (
     <Provider store={store}>
       <NextNProgress color={EIconColor.RADICAL_RED} options={{ showSpinner: false }} />

@@ -17,7 +17,6 @@
     "delete-component": "node ./tools/delete-component.js"
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-react": "3.0.3",
     "@types/gsap": "^3.0.0",
     "@types/lodash": "^4.14.195",
     "@types/node": "20.4.2",
@@ -29,7 +28,6 @@
     "antd": "4.19.2",
     "array-move": "^4.0.0",
     "axios": "0.21.1",
-    "ckeditor5-custom-build": "file:ckeditor5-build",
     "deox": "3.3.1",
     "env-cmd": "^10.1.0",
     "eslint": "8.45.0",
