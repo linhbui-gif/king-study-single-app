@@ -61,7 +61,7 @@ const errorReducer = (state: TErrorState = {}, action: IErrorAction | IResetActi
     if (axiosErrorData?.statusCode === EResponseCode.TOO_MANY_REQUESTS)
       error = 'Bạn gửi quá nhiều yêu cầu trong một khoảng thời gian. Vui lòng thử lại trong vòng 1 phút.';
 
-    if (error && !isNotShowToast && !isUnauthorized) showNotification(ETypeNotification.ERROR, error as string);
+    if (error && !isNotShowToast && !isUnauthorized) showNotification(ETypeNotification.ERROR, error as string,'');
   }
 
   return {

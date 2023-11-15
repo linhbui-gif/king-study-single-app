@@ -31,7 +31,7 @@ const AuthorizedInstance = (baseURL: string): AxiosInstance => {
     if (responseStatus === EResponseCode.UNAUTHORIZED && originalRequest) {
       Helpers.clearTokens();
       // Router.reload();
-      showNotification(ETypeNotification.ERROR, 'Tài khoản đã hết hạn phiên sử dụng. Vui lòng đăng nhập lại.');
+      showNotification(ETypeNotification.ERROR, 'Tài khoản đã hết hạn phiên sử dụng. Vui lòng đăng nhập lại.','');
     }
 
     return Promise.reject(axiosError);
