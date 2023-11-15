@@ -19,7 +19,7 @@ const Partner = ({ loading,data }:any) => {
               slidesToShow={7}
             >
               {[1,2,3,4,5,6,7].map((item: any) => (
-                <div className={'Partner-wrapper'}>
+                <div className={'Partner-wrapper'} key={item}>
                   <div key={item.id} className="Partner-item">
                     <Skeleton.Image />
                   </div>
@@ -48,8 +48,8 @@ const Partner = ({ loading,data }:any) => {
                   slidesToShow={7}
                 >
                   {partners && partners[31].map((item: any) => (
-                    <div className={'Partner-wrapper'}>
-                      <div key={item.id} className="Partner-item">
+                    <div className={'Partner-wrapper'} key={item.id}>
+                      <div className="Partner-item">
                         <img src={env.api.baseUrl.backend + item?.image_location} alt={item?.title}/>
                       </div>
                     </div>

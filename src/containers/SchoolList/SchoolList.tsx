@@ -12,7 +12,7 @@ const SchoolList = ({loading, data}: any) => {
             {
               [1, 2, 3, 4, 5, 6, 7, 8, 9].map((element: any) => {
                 return (
-                  <div className="SchoolList-wrapper-item">
+                  <div className="SchoolList-wrapper-item" key={element}>
                     <div className="SchoolList-wrapper-item-block">
                       <div className="SchoolList-wrapper-item-block-image">
                         <Skeleton.Image />
