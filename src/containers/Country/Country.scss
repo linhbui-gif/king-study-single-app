@@ -2,7 +2,9 @@
   padding: 5rem 0;
   &-item{
     &-image{
-      height: 313px;
+      .ant-skeleton-element .ant-skeleton-image{
+        height: 30rem;
+      }
     }
     img{
       width: 100%;

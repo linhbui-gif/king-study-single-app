@@ -23,7 +23,7 @@ const Review: React.FC<TReviewProps> = ({loading, data}) => {
 
           >
             {
-              dataContent && dataContent[16].map((element: any) => {
+              [1,2,3].map((element: any) => {
                 return (
                   <div className="Review-carousel-col" key={element.id}>
                     <div className="Review-carousel-item">

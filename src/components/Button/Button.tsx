@@ -47,24 +47,18 @@ const Button: React.FC<TButtonProps> = ({
         onClick={handleClickButton}
         danger={danger}
         disabled={disabled || loading}
+        loading={loading}
       >
         <div
           className="Button-wrapper flex items-center justify-center"
           style={{ flexDirection: reverse ? 'row-reverse' : undefined }}
         >
-          {loading ? (
-            <Loading size={size === 'small' ? 18 : undefined} color={EIconColor.WHITE} />
-          ) : (
-            <>
-              {iconName && (
-                <div className="Button-icon">
-                  <Icon name={iconName} color={iconColor} />
-                </div>
-              )}
-              {title && <span className="Button-title">{title}</span>}
-            </>
+          {iconName && (
+            <div className="Button-icon">
+              <Icon name={iconName} color={iconColor} />
+            </div>
           )}
-
+          {title && <span className="Button-title">{title}</span>}
           {badge && (
             <div className="Button-badge" style={{ color: badgeTextColor, background: badgeColor }}>
               {badge}

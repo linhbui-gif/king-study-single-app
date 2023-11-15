@@ -14,7 +14,7 @@ const Country: React.FC<TCountryHomeProps> = ({ loading, data }) => {
           <Typography.Title className={"Title"} level={2}><Skeleton.Input active size={"small"} /></Typography.Title>
         </Col>
         {
-          dataContent && dataContent[15].map((element:any) => {
+          [1,2,3,4,5,6].map((element:any) => {
             return (
               <Col span={8} key={element?.id}>
                 <div className="Country-item">

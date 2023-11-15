@@ -88,21 +88,14 @@ const Select: React.FC<TSelectProps> = ({
         className="Select-control"
         size={size}
         value={value}
-        showSearch={onSearch && showSearch}
+        showSearch={showSearch}
         placeholder={placeholder}
         defaultValue={defaultValue}
-        labelInValue
+        // labelInValue
         allowClear={allowClear}
-        filterOption={onSearch ? false : filterOption}
-        onSearch={showSearch ? handleSearch : undefined}
-        options={options?.filter((option) => !option.hide)}
-        // suffixIcon={
-        //   suffixIcon ? (
-        //     <Icon name={suffixIcon} color={EIconColor.BLACK} />
-        //   ) : (
-        //     !readOnlyText && <Icon name={EIconName.AngleDown} color={EIconColor.PALE_SKY} />
-        //   )
-        // }
+        filterOption={filterOption}
+        onSearch={handleSearch}
+        options={options}
         searchValue={keyword}
         dropdownClassName={classNames('Select-dropdown', dropdownClassName)}
         getPopupContainer={(trigger: HTMLElement): HTMLElement => trigger}
@@ -110,9 +103,8 @@ const Select: React.FC<TSelectProps> = ({
         onClear={handleClear}
         dropdownRender={dropdownRender}
         disabled={disabled}
-        placement={placement}
-        virtual={false}
-        clearIcon={<Icon name={EIconName.X} color={EIconColor.BLACK} />}
+        // placement={placement}
+        // virtual={false}
       />
     </div>
   );

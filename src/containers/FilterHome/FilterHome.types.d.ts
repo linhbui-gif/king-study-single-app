@@ -1,1 +1,1 @@
-export type TFilterHomeProps = unknown;
+export type TFilterHomeProps = any;

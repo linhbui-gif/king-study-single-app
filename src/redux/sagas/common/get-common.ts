@@ -6,6 +6,7 @@ import {EResponseCode} from "@/common/enums";
 // FUNCTION
 
 export function* commonSaga(action: ActionType<typeof getCommonAction.request>): Generator {
+  console.log('action',action)
   const { materials, successCallback, failedCallback } = action?.payload;
   try {
     const response = yield call(getListCommonApi,materials);
@@ -13,10 +14,9 @@ export function* commonSaga(action: ActionType<typeof getCommonAction.request>):
     if(commonResponse.code === EResponseCode.OK){
       yield put(getCommonAction.success(commonResponse?.data));
     }
-    successCallback?.(commonResponse);
+    // successCallback?.(commonResponse);
   } catch (err) {
-    console.log('err',err)
-    // yield put(getCommonAction.failure(err));
-    failedCallback?.(err);
+    yield put(getCommonAction.failure(err));
+    // failedCallback?.(err);
   }
 }

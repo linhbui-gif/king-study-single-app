@@ -9,26 +9,22 @@ const Contact: React.FC<TContactHomeProps> = ({ loading, data }) => {
   const Loading = () => {
     return (
       <Row gutter={[16,16]}>
-        {dataContent && (
-          <>
-            <Col span={12}>
-              <div className="Contact-content">
-                <Skeleton.Image />
-                <div className="Contact-btn">
-                  <Skeleton.Button />
-                </div>
-              </div>
-            </Col>
-            <Col span={12}>
-              <div className="Contact-content">
-                <Skeleton.Image />
-                <div className="Contact-btn">
-                  <Skeleton.Button />
-                </div>
-              </div>
-            </Col>
-          </>
-        )}
+        <Col span={12}>
+          <div className="Contact-content">
+            <Skeleton.Image />
+            <div className="Contact-btn">
+              <Skeleton.Button />
+            </div>
+          </div>
+        </Col>
+        <Col span={12}>
+          <div className="Contact-content">
+            <Skeleton.Image />
+            <div className="Contact-btn">
+              <Skeleton.Button />
+            </div>
+          </div>
+        </Col>
       </Row>
     )
   }

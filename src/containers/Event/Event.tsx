@@ -22,7 +22,7 @@ const Event:React.FC<TEventHomeProps> = ({ loading, data }) => {
             slidesToScroll={3}
 
           >
-            {dataContent && dataContent[17].map((item:any) => (
+            {[1,2,3].map((item:any) => (
               <div className="Event-carousel-col" key={item.id} >
                 <div className="Event-carousel-item">
                   <div className="Event-carousel-item-image">

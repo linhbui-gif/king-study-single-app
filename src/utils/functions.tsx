@@ -11,6 +11,7 @@ import { MAX_FILE_IMAGE_SIZE, REGEX } from '@/common/constants';
 import env from '@/env';
 import Icon, { EIconColor, EIconName } from '@/components/Icon';
 import { TAnswer } from '@/common/models';
+import {CloseOutlined} from "@ant-design/icons";
 
 export const removeAccents = (str: string): string => {
   let strConverted = str;
@@ -46,46 +47,37 @@ export const removeAccents = (str: string): string => {
   return '';
 };
 
-export const showNotification = (type: ETypeNotification, description: string): void => {
+export const showNotification = (type: ETypeNotification, description: string, message: string): void => {
   const options = {
     className: 'Notification',
     description,
     placement: 'top' as NotificationPlacement,
-    // closeIcon: <Icon name={EIconName.X} color={EIconColor.WHITE} />,
-    closeIcon: <></>,
+    closeIcon: <><CloseOutlined /> </>,
   };
 
   switch (type) {
     case ETypeNotification.SUCCESS:
       notification.success({
         ...options,
-        // message: 'Thành Công',
-        message: '',
-        // icon: <Icon name={EIconName.CircleCheck} color={EIconColor.WHITE} />,
+        message: message,
       });
       break;
     case ETypeNotification.WARNING:
       notification.warning({
         ...options,
-        // message: 'Cảnh Báo',
-        message: '',
-        // icon: <Icon name={EIconName.CircleWarning} color={EIconColor.WHITE} />,
+        message: message,
       });
       break;
     case ETypeNotification.ERROR:
       notification.error({
         ...options,
-        // message: 'Lỗi',
-        message: '',
-        // icon: <Icon name={EIconName.CircleX} color={EIconColor.WHITE} />,
+        message: message,
       });
       break;
     case ETypeNotification.INFO:
       notification.info({
         ...options,
-        // message: 'Thông Báo',
-        message: '',
-        // icon: <Icon name={EIconName.CircleInfo} color={EIconColor.WHITE} />,
+        message: message,
       });
       break;
     default:
@@ -418,3 +410,8 @@ export const removeParam = (sourceURL: string): string => {
 export const addZeroIfLessThanTen = (number: number): string => {
   return number < 10 ? `0${number}` : `${number}`;
 };
+export const convertDataToSelectOptions = (arr:any) => {
+  return arr.map(({ id, name }:any) => {
+    return { value: id, label: name }
+  })
+}

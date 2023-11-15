@@ -37,7 +37,7 @@ const GuestLayout: React.FC<TGuestLayoutProps> = ({ children }) => {
       </div>
       <div className="GuestLayout-body">{children}</div>
       <div className="GuestLayout-footer">
-        <Footer />
+        {/*<Footer />*/}
       </div>
       <div className={classNames('GuestLayout-ontop', { visible: isShowBtnOnTop })}>
         <Button
