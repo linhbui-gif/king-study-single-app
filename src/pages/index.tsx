@@ -34,7 +34,7 @@ const Home = ({  }:any) => {
   const getListCommon = async () => {
     try {
       setLoading(true)
-      const response = await getListCommonApi({});
+      const response:any = await getListCommonApi({});
       if(response?.code === EResponseCode.OK){
         setLoading(false)
         setData(response?.data)
@@ -47,7 +47,7 @@ const Home = ({  }:any) => {
   const getListCountries = async () => {
     try {
       setLoading(true)
-      const response = await getListCountryApi({});
+      const response:any = await getListCountryApi({});
       if(response?.code === EResponseCode.OK){
         setLoading(false)
         setCountry(convertDataToSelectOptions(response?.data?.countries))
@@ -60,7 +60,7 @@ const Home = ({  }:any) => {
   const getListRanking = async () => {
     try {
       setLoading(true)
-      const response = await getListRankingApi({});
+      const response:any = await getListRankingApi({});
       if(response?.code === EResponseCode.OK){
         setLoading(false)
         setRanking(convertDataToSelectOptions(response?.data?.ranking))
@@ -73,7 +73,7 @@ const Home = ({  }:any) => {
   const getListLevel= async () => {
     try {
       setLoading(true)
-      const response = await getListLevelApi({});
+      const response:any = await getListLevelApi({});
       if(response?.code === EResponseCode.OK){
         setLoading(false)
         setLevel(convertDataToSelectOptions(response?.data?.level))
@@ -86,7 +86,7 @@ const Home = ({  }:any) => {
   const getListMajor = async () => {
     try {
       setLoading(true)
-      const response = await getListMajorApi({});
+      const response:any = await getListMajorApi({});
       if(response?.code === EResponseCode.OK){
         setLoading(false)
         setMajor(convertDataToSelectOptions(response?.data?.majors))
@@ -100,7 +100,7 @@ const Home = ({  }:any) => {
     try {
       const body = {...values}
       setLoadingSchool(true)
-      const response = await getListSearchSchoolApi(body);
+      const response:any = await getListSearchSchoolApi(body);
       if(response?.code === EResponseCode.OK){
         setLoadingSchool(false)
         setSchool(response?.data?.data)
