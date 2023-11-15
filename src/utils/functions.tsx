@@ -49,8 +49,7 @@ export const showNotification = (type: ETypeNotification, description: string, m
   const options = {
     className: 'Notification',
     description,
-    placement: 'top' as NotificationPlacement,
-    closeIcon: <CloseOutlined /> as any,
+    placement: 'top' as NotificationPlacement
   };
 
   switch (type) {
