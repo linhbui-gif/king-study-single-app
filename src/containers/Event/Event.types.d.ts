@@ -1,1 +1,1 @@
-export type TEventHomeProps = unknown;
+export type TEventHomeProps = any;

@@ -1,1 +1,1 @@
-export type TCountryHomeProps = unknown;
+export type TCountryHomeProps = any;

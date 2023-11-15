@@ -7,20 +7,44 @@ import env from "@/env";
 
 const Country: React.FC<TCountryHomeProps> = ({ loading, data }) => {
   const dataContent = data?.items
+  const Loading = () => {
+    return (
+      <Row gutter={[16,16]} flex={"wrap"}>
+        <Col span={24}>
+          <Typography.Title className={"Title"} level={2}><Skeleton.Input active size={"small"} /></Typography.Title>
+        </Col>
+        {
+          dataContent && dataContent[15].map((element:any) => {
+            return (
+              <Col span={8} key={element?.id}>
+                <div className="Country-item">
+                  <div className={"Country-item-image"}>
+                    <Skeleton.Image  />
+                  </div>
+                  <Typography.Paragraph><Skeleton.Input active size={"small"} /></Typography.Paragraph>
+                </div>
+              </Col>
+            )
+          })
+        }
+      </Row>
+    )
+  }
   return (
     <section className={"Country"}>
       <div className={"container"}>
-        <Row gutter={[16,16]} flex={"wrap"}>
+        {loading && Loading()}
+        {!loading && <Row gutter={[16, 16]} flex={"wrap"}>
           <Col span={24}>
             <Typography.Title className={"Title"} level={2}>QUỐC GIA DU HỌC</Typography.Title>
           </Col>
           {
-            dataContent && dataContent[15].map((element) => {
+            dataContent && dataContent[15].map((element: any) => {
               return (
                 <Col span={8} key={element?.id}>
                   <div className="Country-item">
                     <div className={"Country-item-image"}>
-                      {loading ? <Skeleton.Image active /> :  <img src={env.api.baseUrl.backend + element['image_location']} alt={''} />}
+                      <img src={env.api.baseUrl.backend + element['image_location']} alt={''}/>
                     </div>
                     <Typography.Paragraph>{element['locale_vi']['title']}</Typography.Paragraph>
                   </div>
@@ -28,7 +52,7 @@ const Country: React.FC<TCountryHomeProps> = ({ loading, data }) => {
               )
             })
           }
-        </Row>
+        </Row>}
       </div>
     </section>
   )

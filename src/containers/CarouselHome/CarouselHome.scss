@@ -3,7 +3,7 @@
 .CarouselHome {
   padding-top: 2.4rem;
   padding-bottom: 2.4rem;
-
+  height: 72rem;
   @media (max-width: 1600px) {
     padding-left: calc(4.8rem + 3rem);
     padding-right: calc(4.8rem + 3rem);
@@ -13,7 +13,12 @@
     padding-left: 0;
     padding-right: 0;
   }
-
+  .ant-skeleton-element{
+    height: 72rem;
+    .ant-skeleton-image{
+      display: flex!important;
+    }
+  }
   &-title {
     text-align: center;
     font-size: 3.6rem;

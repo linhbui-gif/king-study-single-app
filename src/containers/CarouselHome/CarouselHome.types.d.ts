@@ -1,4 +1,1 @@
-export type TCarouselHomeProps = {
-  loading?:boolean,
-  data?: any
-};
+export type TCarouselHomeProps = any

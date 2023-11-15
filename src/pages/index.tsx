@@ -29,11 +29,11 @@ const Home = () => {
   return (
     <div className="Home">
       <div className="Home-wrapper">
-        <CarouselHome loading={loading} data={data}/>
+        <CarouselHome loading={true} data={data}/>
         <FilterHome />
-        <About loading={loading} data={data}/>
-        <Contact loading={loading} data={data}/>
-        <Country loading={loading} data={data} />
+        <About loading={true} data={data}/>
+        <Contact loading={true} data={data}/>
+        <Country loading={true} data={data} />
         <Review loading={loading}/>
         <Event loading={loading} />
       </div>

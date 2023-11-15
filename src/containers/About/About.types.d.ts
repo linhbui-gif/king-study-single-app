@@ -1,1 +1,1 @@
-export type TAboutProps = unknown;
+export type TAboutProps = any;

@@ -1,1 +1,1 @@
-export type TContactHomeProps = unknown;
+export type TContactHomeProps = any;

@@ -1,1 +1,1 @@
-export type TReviewProps = unknown;
+export type TReviewProps = any;
