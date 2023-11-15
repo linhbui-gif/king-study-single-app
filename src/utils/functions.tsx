@@ -8,8 +8,6 @@ import { NotificationPlacement } from 'antd/lib/notification';
 
 import { EFormat, ETypeNotification } from '@/common/enums';
 import { MAX_FILE_IMAGE_SIZE, REGEX } from '@/common/constants';
-import env from '@/env';
-import Icon, { EIconColor, EIconName } from '@/components/Icon';
 import { TAnswer } from '@/common/models';
 import {CloseOutlined} from "@ant-design/icons";
 
@@ -52,7 +50,7 @@ export const showNotification = (type: ETypeNotification, description: string, m
     className: 'Notification',
     description,
     placement: 'top' as NotificationPlacement,
-    closeIcon: <><CloseOutlined /> </>,
+    closeIcon: <CloseOutlined /> as any,
   };
 
   switch (type) {
