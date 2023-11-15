@@ -20,7 +20,7 @@ const Home = ({ initialData }:any) => {
   const dispatch = useDispatch();
   const router = useRouter();
   const getListCommon = useCallback(() => {
-    dispatch(getCommonAction.request({}));
+    dispatch(getCommonAction.request({},{},{}));
   }, [dispatch]);
   const loading = useSelector((state: TRootState) => state.loadingReducer[EGetCommonAction.GET_COMMON]);
   const data = useSelector((state:TRootState) => state.CommonReducer.getCommonResponse);

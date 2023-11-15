@@ -11,7 +11,7 @@ const Loading: React.FC<TLoadingProps> = ({ size = 24, color = EIconColor.RADICA
     <Spin
       className="Loading"
       style={{ width: size, height: size }}
-      indicator={<LoadingOutlined style={{ fontSize: size, color }} spin />}
+      spinning
     />
   );
 };
