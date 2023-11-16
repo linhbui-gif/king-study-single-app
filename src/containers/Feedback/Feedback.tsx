@@ -3,7 +3,7 @@ import {Col, Modal, Row, Skeleton, Typography} from "antd";
 import Carousels from "@/components/Carousels";
 import env from "@/env";
 
-const Feedback = ({ loading, data }:any) => {
+const Feedback: React.FC = ({ loading, data }:any) => {
   const dataContent = data?.items
   const [open, setOpen] = useState<any>(false);
   const [iframeLink, setIframeLink] = useState('');
