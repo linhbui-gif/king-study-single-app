@@ -5,7 +5,7 @@ import env from "@/env";
 
 const Feedback = ({ loading, data }:any) => {
   const dataContent = data?.items
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<any>(false);
   const [iframeLink, setIframeLink] = useState('');
   const Loading = () => {
     return (
