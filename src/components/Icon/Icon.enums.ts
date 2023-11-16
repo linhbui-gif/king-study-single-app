@@ -50,6 +50,10 @@ export enum EIconName {
   Upload = 'Upload',
   Reload = 'Reload',
   Wifi = 'Wifi',
+  HomeOutlined = 'HomeOutlined',
+  CodeSandboxOutlined = 'CodeSandboxOutlined',
+  HeartOutlined = 'HeartOutlined',
+  UserOutlined = 'UserOutlined',
 }
 
 export enum EIconColor {

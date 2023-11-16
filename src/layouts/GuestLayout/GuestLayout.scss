@@ -59,8 +59,13 @@
           color: $white;
         }
         &-link{
-          .anticon svg{
+          .Icon svg{
+            height: auto;
             font-size: 2.5rem;
+            width: auto;
+            path{
+              fill: $white;
+            }
           }
         }
       }

@@ -55,6 +55,10 @@ import Calendar from './Calendar';
 import Upload from './Upload';
 import Reload from './Reload';
 import Wifi from './Wifi';
+import HomeOutlined from './HomeOutline';
+import CodeSandboxOutlined from './CodeSandboxOutlined';
+import HeartOutlined from './HeartOutlined';
+import UserOutlined from './UserOutlined';
 
 const Icon: React.FC<TIconProps> = ({ name, className, color, style, onClick }) => {
   const renderIcon = (): React.ReactElement => {
@@ -161,6 +165,14 @@ const Icon: React.FC<TIconProps> = ({ name, className, color, style, onClick }) 
         return <Reload color={color} />;
       case EIconName.Wifi:
         return <Wifi color={color} />;
+      case EIconName.HomeOutlined:
+        return <HomeOutlined color={color} />;
+        case EIconName.CodeSandboxOutlined:
+        return <CodeSandboxOutlined color={color} />;
+        case EIconName.HeartOutlined:
+        return <HeartOutlined color={color} />;
+        case EIconName.UserOutlined:
+        return <UserOutlined color={color} />;
       default:
         return <></>;
     }
