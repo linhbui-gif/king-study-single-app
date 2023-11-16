@@ -9,7 +9,7 @@ const Contact: React.FC<TContactHomeProps> = ({ loading, data }) => {
   const Loading = () => {
     return (
       <Row gutter={[16,16]}>
-        <Col span={12}>
+        <Col span={24} md={{ span: 12 }} lg={{ span: 12 }}>
           <div className="Contact-content">
             <Skeleton.Image />
             <div className="Contact-btn">
@@ -17,7 +17,7 @@ const Contact: React.FC<TContactHomeProps> = ({ loading, data }) => {
             </div>
           </div>
         </Col>
-        <Col span={12}>
+        <Col span={24} md={{ span: 12 }} lg={{ span: 12 }}>
           <div className="Contact-content">
             <Skeleton.Image />
             <div className="Contact-btn">
@@ -37,7 +37,7 @@ const Contact: React.FC<TContactHomeProps> = ({ loading, data }) => {
               <Row gutter={[16,16]}>
                 {dataContent && (
                   <>
-                    <Col span={12}>
+                    <Col span={24} md={{ span: 12 }} lg={{ span: 12 }}>
                       <div className="Contact-content">
                         <img src={env.api.baseUrl.backend + dataContent['5'][0]['image_location'] } alt={''}/>
                         <div className="Contact-btn">
@@ -45,7 +45,7 @@ const Contact: React.FC<TContactHomeProps> = ({ loading, data }) => {
                         </div>
                       </div>
                     </Col>
-                    <Col span={12}>
+                    <Col span={24} md={{ span: 12 }} lg={{ span: 12 }}>
                       <div className="Contact-content">
                         <img src={env.api.baseUrl.backend + dataContent['5'][1]['image_location'] } alt={''} />
                         <div className="Contact-btn">

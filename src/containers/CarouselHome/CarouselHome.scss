@@ -38,6 +38,9 @@
       min-width: 100%;
       min-height: 100%;
       object-position: left;
+      @media (max-width: 1440px){
+        object-position: center;
+      }
     }
   }
 }

@@ -16,7 +16,27 @@ const Partner = ({ loading,data }:any) => {
               dots={false}
               arrows={false}
               autoplay={false}
-              slidesToShow={7}
+              slidesToScroll={1}
+              responsive={[
+                {
+                  breakpoint: 1600,
+                  settings: {
+                    slidesToShow: 7,
+                  },
+                },
+                {
+                  breakpoint: 1200,
+                  settings: {
+                    slidesToShow: 4,
+                  },
+                },
+                {
+                  breakpoint: 575,
+                  settings: {
+                    slidesToShow: 2,
+                  },
+                }
+              ]}
             >
               {[1,2,3,4,5,6,7].map((item: any) => (
                 <div className={'Partner-wrapper'} key={item}>
@@ -46,6 +66,27 @@ const Partner = ({ loading,data }:any) => {
                   arrows={false}
                   autoplay={true}
                   slidesToShow={7}
+                  slidesToScroll={1}
+                  responsive={[
+                    {
+                      breakpoint: 1600,
+                      settings: {
+                        slidesToShow: 7,
+                      },
+                    },
+                    {
+                      breakpoint: 1200,
+                      settings: {
+                        slidesToShow: 4,
+                      },
+                    },
+                    {
+                      breakpoint: 575,
+                      settings: {
+                        slidesToShow: 2,
+                      },
+                    }
+                  ]}
                 >
                   {partners && partners[31].map((item: any) => (
                     <div className={'Partner-wrapper'} key={item.id}>

@@ -26,7 +26,7 @@ const FilterHome: React.FC<TFilterHomeProps> = ({countries, ranking, level, majo
           <Typography.Title level={3} className="FilterHome-title">TÌM KIẾM KHÓA HỌC</Typography.Title>
           <Form onFinish={onFinish}>
             <Row gutter={[16,16]}>
-              <Col span={4}>
+              <Col span={12} md={{ span: 8 }} lg={{ span: 4 }}>
                 <Form.Item name="country">
                   <Select
                     placeholder="Chọn quốc gia"
@@ -35,7 +35,7 @@ const FilterHome: React.FC<TFilterHomeProps> = ({countries, ranking, level, majo
                   />
                 </Form.Item>
               </Col>
-              <Col span={4}>
+              <Col span={12} md={{ span: 8 }} lg={{ span: 4 }}>
                 <Form.Item name="city">
                   <Select
                     placeholder="Chọn thành phố"
@@ -44,7 +44,7 @@ const FilterHome: React.FC<TFilterHomeProps> = ({countries, ranking, level, majo
                   />
                 </Form.Item>
               </Col>
-              <Col span={4}>
+              <Col span={12} md={{ span: 8 }} lg={{ span: 4 }}>
                 <Form.Item name="levelcourse">
                   <Select
                     placeholder="Bậc học"
@@ -54,7 +54,7 @@ const FilterHome: React.FC<TFilterHomeProps> = ({countries, ranking, level, majo
                   />
                 </Form.Item>
               </Col>
-              <Col span={4}>
+              <Col span={12} md={{ span: 8 }} lg={{ span: 4 }}>
                 <Form.Item name="ranking">
                   <Select
                     placeholder="Ranking"
@@ -64,7 +64,7 @@ const FilterHome: React.FC<TFilterHomeProps> = ({countries, ranking, level, majo
                   />
                 </Form.Item>
               </Col>
-              <Col span={4}>
+              <Col span={12} md={{ span: 8 }} lg={{ span: 4 }}>
                 <Form.Item name="survey_tuition">
                   <Select
                     placeholder="Học phí"
@@ -86,7 +86,7 @@ const FilterHome: React.FC<TFilterHomeProps> = ({countries, ranking, level, majo
                   />
                 </Form.Item>
               </Col>
-              <Col span={4}>
+              <Col span={12} md={{ span: 8 }} lg={{ span: 4 }}>
                 <Form.Item name="majors">
                   <Select
                     placeholder="Ngành học"
@@ -96,7 +96,7 @@ const FilterHome: React.FC<TFilterHomeProps> = ({countries, ranking, level, majo
                   />
                 </Form.Item>
               </Col>
-              <Col span={24} style={{ display:'flex',alignItems:'center' }}>
+              <Col span={24} md={{ span: 24 }} lg={{ span: 24 }} style={{ display:'flex',alignItems:'center' }}>
                 <Form.Item name="keywords" style={{ marginBottom:0,flex:1, marginRight:10 }}>
                   <Input placeholder={"Nội dung tìm kiếm.."} />
                 </Form.Item>

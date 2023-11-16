@@ -22,41 +22,34 @@ const Footer: React.FC<TFooterProps> = () => {
     <footer className="Footer">
       <div className="container">
         <div className="Footer-wrapper">
-          <div className="Footer-logo">
-            <Link href={Paths.Home}>
-              <Image src={Logo} alt="" />
-            </Link>
-          </div>
-
-          <Row align="middle" justify="space-between" className="Footer-main">
-            <Col>
-              <p style={{ maxWidth: '34.5rem' }} className="Footer-description">
-                {trans?.footer?.description}
-              </p>
-            </Col>
-            <Col>
-              <Row gutter={[48, 24]} align="middle" className="Footer-main">
-                <Col>
-                  <ul className="Footer-list flex items-center">
-                    {dataFooterMenu({ trans }).map((item) => (
-                      <li
-                        className={classNames('Footer-list-item', {
-                          active: (item.activePaths as string[]).includes(removeParam(asPath)),
-                        })}
-                        key={item.id}
-                      >
-                        <Link href={item.link}>{item.title}</Link>
+          <Row gutter={[16,16]}>
+            {
+              [1,2,3,4].map((element:any) => {
+                return (
+                  <Col span={24} md={{ span: 12 }} lg={{ span: 6 }} key={element}>
+                    <h3 className="Footer-title">Du học</h3>
+                    <ul className="Footer-list">
+                      <li className="Footer-list-item">
+                        <Link href={'#'} className="Footer-list-item-link">Du học Anh</Link>
                       </li>
-                    ))}
-                  </ul>
-                </Col>
-                <Col>
-                  <SelectLanguage />
-                </Col>
-              </Row>
-            </Col>
+                      <li className="Footer-list-item">
+                        <Link href={'#'} className="Footer-list-item-link">Du học Úc</Link>
+                      </li>
+                      <li className="Footer-list-item">
+                        <Link href={'#'} className="Footer-list-item-link">Du học Mỹ</Link>
+                      </li>
+                      <li className="Footer-list-item">
+                        <Link href={'#'} className="Footer-list-item-link">Du học Canada</Link>
+                      </li>
+                      <li className="Footer-list-item">
+                        <Link href={'#'} className="Footer-list-item-link">Du học Ireland</Link>
+                      </li>
+                    </ul>
+                  </Col>
+                )
+              })
+            }
           </Row>
-
           <div className="Footer-copyright">
             <p className="Footer-description">{trans?.footer?.copyright}</p>
           </div>

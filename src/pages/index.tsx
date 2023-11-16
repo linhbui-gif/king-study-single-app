@@ -21,6 +21,7 @@ import Partner from "@/containers/Partner";
 import SchoolList from "@/containers/SchoolList";
 import {EResponseCode, ETypeNotification} from "@/common/enums";
 import {convertDataToSelectOptions, showNotification} from "@/utils/functions";
+import Feedback from "@/containers/Feedback";
 
 const Home = ({  }:any) => {
   const [loading, setLoading] = useState(false)
@@ -145,6 +146,7 @@ const Home = ({  }:any) => {
             <Review loading={loading} data={data}/>
             <Event loading={loading} data={data} />
             <Partner loading={loading} data={data} />
+            <Feedback loading={loading} data={data} />
           </>
         )}
       </div>

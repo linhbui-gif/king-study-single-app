@@ -19,8 +19,27 @@ const Event:React.FC<TEventHomeProps> = ({ loading, data }) => {
             arrows={false}
             autoplay={true}
             slidesToShow={3}
-            slidesToScroll={3}
-
+            slidesToScroll={1}
+            responsive={[
+              {
+                breakpoint: 1600,
+                settings: {
+                  slidesToShow: 3,
+                },
+              },
+              {
+                breakpoint: 1200,
+                settings: {
+                  slidesToShow: 2,
+                },
+              },
+              {
+                breakpoint: 575,
+                settings: {
+                  slidesToShow: 1,
+                },
+              }
+            ]}
           >
             {[1,2,3].map((item:any) => (
               <div className="Event-carousel-col" key={item.id} >
@@ -52,7 +71,27 @@ const Event:React.FC<TEventHomeProps> = ({ loading, data }) => {
                     arrows={false}
                     autoplay={true}
                     slidesToShow={3}
-                    slidesToScroll={3}
+                    slidesToScroll={1}
+                    responsive={[
+                      {
+                        breakpoint: 1600,
+                        settings: {
+                          slidesToShow: 3,
+                        },
+                      },
+                      {
+                        breakpoint: 1200,
+                        settings: {
+                          slidesToShow: 2,
+                        },
+                      },
+                      {
+                        breakpoint: 575,
+                        settings: {
+                          slidesToShow: 1,
+                        },
+                      }
+                    ]}
                   >
                     {dataContent && dataContent[17].map((item:any) => (
                       <div className="Event-carousel-col" key={item.id} >

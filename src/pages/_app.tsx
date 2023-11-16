@@ -37,7 +37,7 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
 
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="vi_VN" />
-        <meta property="og:image:alt" content="My Portfolio Logo" />
+        <meta property="og:image:alt" content="King Study" />
       </Head>
 
       {getLayout(<AnyComponent {...pageProps} />)}

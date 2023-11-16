@@ -9,6 +9,14 @@
       padding: 0 1rem;
       flex: 0 0 calc(100% / 5);
       max-width: calc(100% / 5);
+      @media (max-width: 575px) {
+        flex: 0 0 calc(100% / 2);
+        max-width: calc(100% / 2);
+      }
+      @media (max-width: 1024px) and (min-width: 576px) {
+        flex: 0 0 calc(100% / 3);
+        max-width: calc(100% / 3);
+      }
       &-block{
         border-radius: 0.5rem;
         background: #fff;
@@ -46,6 +54,9 @@
           padding: 3rem;
           display: flex;
           height: 15rem;
+          @media (max-width: 575px) {
+            padding: 2rem;
+          }
           img{
             max-width: 100%;
             max-height: 100%;
@@ -75,6 +86,9 @@
             -webkit-box-orient: vertical;
             .ant-skeleton-element .ant-skeleton-input-sm{
               width: 100%;
+            }
+            @media (max-width: 575px) {
+              height: 43px;
             }
             &:hover{
               color: #f1592a;
@@ -115,6 +129,9 @@
               .ant-skeleton-element .ant-skeleton-input-sm{
                 width: 58px;
                 min-width: 20px;
+                @media (max-width: 575px) {
+                  height: 18px;
+                }
               }
               &-flag{
                 width: 2.6rem;
@@ -136,6 +153,16 @@
             }
           }
         }
+      }
+    }
+  }
+  .modify{
+    @media (max-width: 575px) {
+      .ant-skeleton-element .ant-skeleton-input-sm {
+        width: 46px;
+        min-width: 46px;
+        height: 24px;
+        line-height: 24px;
       }
     }
   }

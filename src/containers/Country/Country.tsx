@@ -16,7 +16,7 @@ const Country: React.FC<TCountryHomeProps> = ({ loading, data }) => {
         {
           [1,2,3,4,5,6].map((element:any) => {
             return (
-              <Col span={8} key={element?.id}>
+              <Col span={12} md={{ span: 12 }} lg={{ span: 8 }} key={element?.id}>
                 <div className="Country-item">
                   <div className={"Country-item-image"}>
                     <Skeleton.Image  />
@@ -41,7 +41,7 @@ const Country: React.FC<TCountryHomeProps> = ({ loading, data }) => {
           {
             dataContent && dataContent[15].map((element: any) => {
               return (
-                <Col span={8} key={element?.id}>
+                <Col span={12} md={{ span: 12 }} lg={{ span: 8 }} key={element?.id}>
                   <div className="Country-item">
                     <div className={"Country-item-image"}>
                       <img src={env.api.baseUrl.backend + element['image_location']} alt={''}/>

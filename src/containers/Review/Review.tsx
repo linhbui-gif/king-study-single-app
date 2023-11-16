@@ -19,8 +19,27 @@ const Review: React.FC<TReviewProps> = ({loading, data}) => {
             arrows={false}
             autoplay={true}
             slidesToShow={3}
-            slidesToScroll={3}
-
+            slidesToScroll={1}
+            responsive={[
+              {
+                breakpoint: 1600,
+                settings: {
+                  slidesToShow: 3,
+                },
+              },
+              {
+                breakpoint: 1200,
+                settings: {
+                  slidesToShow: 2,
+                },
+              },
+              {
+                breakpoint: 575,
+                settings: {
+                  slidesToShow: 1.2,
+                },
+              }
+            ]}
           >
             {
               [1,2,3].map((element: any) => {
@@ -59,13 +78,32 @@ const Review: React.FC<TReviewProps> = ({loading, data}) => {
                 <Typography.Title className={"Title text-left"} level={2}>TÔI ĐÃ CHỌN KINGSTUDY</Typography.Title>
                 <div className={"Review-carousel"}>
                   <Carousels
-                    infinite={false}
+                    infinite={true}
                     dots={false}
                     arrows={false}
                     autoplay={true}
                     slidesToShow={3}
-                    slidesToScroll={3}
-
+                    slidesToScroll={1}
+                    responsive={[
+                      {
+                        breakpoint: 1600,
+                        settings: {
+                          slidesToShow: 3,
+                        },
+                      },
+                      {
+                        breakpoint: 1200,
+                        settings: {
+                          slidesToShow: 2,
+                        },
+                      },
+                      {
+                        breakpoint: 575,
+                        settings: {
+                          slidesToShow: 1.2,
+                        },
+                      }
+                    ]}
                   >
                     {dataContent && dataContent[16].map((element: any) => {
                       return (

@@ -1,0 +1,51 @@
+.Feedback{
+  padding: 5.5rem 0;
+  background: #f9f8f9;
+  overflow: hidden;
+  &-carousel{
+    &-col{
+      padding: 0 10px;
+    }
+    &-item{
+      position: relative;
+      &-image{
+        img{
+          border-radius: 1rem;
+          max-width: 100%;
+          height: auto;
+          border-style: none;
+          vertical-align: middle;
+          display: block;
+        }
+        .ant-skeleton-element .ant-skeleton-image{
+          height: 30rem;
+        }
+      }
+      .icon{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-5%, -50%);
+      }
+    }
+  }
+}
+.Modal-feedback{
+  .ant-modal-header{
+    background: $gradient-orange;
+    text-transform: uppercase;
+    text-align: center;
+    .ant-modal-title{
+      font-size: 1.8rem;
+      color: white;
+    }
+  }
+  .ant-modal-close-x{
+    svg{
+      path{
+        fill: white;
+      }
+    }
+  }
+}

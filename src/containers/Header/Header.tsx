@@ -12,14 +12,11 @@ import { removeParam } from '@/utils/functions';
 import Button, { EButtonStyleType } from '@/components/Button';
 import Icon, { EIconColor, EIconName } from '@/components/Icon';
 import Input from '@/components/Input';
-import ImageAvatar from '@/assets/images/image-avatar.png';
-import IconRankV from '@/assets/icons/icon-rank-v.svg';
-import Avatar from '@/components/Avatar';
 import DrawerMenuMobile from '@/containers/Header/DrawerMenuMobile';
 import { useModalState, useTrans } from '@/utils/hooks';
 
 import { THeaderProps } from './Header.types.d';
-import { dataHeaderChildPageMenu, dataHeaderMenu } from './Header.data';
+import { dataHeaderChildPageMenu } from './Header.data';
 
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
@@ -77,14 +74,16 @@ const Header: React.FC<THeaderProps> = () => {
                 </Col>
               </Row>
             </Col>
-            <Col flex={1}>
-              <Input
-                type="text"
-                placeholder={"Tìm kiếm..."}
-                showVisiblePassword={false}
-                prefix={<Icon name={EIconName.Search} color={EIconColor.BLACK} />}
-              />
-            </Col>
+            <MediaQuery minWidth={768}>
+              <Col flex={1}>
+                <Input
+                  type="text"
+                  placeholder={"Tìm kiếm..."}
+                  showVisiblePassword={false}
+                  prefix={<Icon name={EIconName.Search} color={EIconColor.BLACK} />}
+                />
+              </Col>
+            </MediaQuery>
             <Col>
               <Button
                 title="Đăng nhập"
@@ -95,30 +94,30 @@ const Header: React.FC<THeaderProps> = () => {
                 onClick={(): void => setIsLogged(true)}
               />
             </Col>
-            <MediaQuery maxWidth={991}>
-              <Col>
-                <Button
-                  iconName={EIconName.Menu}
-                  iconColor={EIconColor.RADICAL_RED}
-                  styleType={EButtonStyleType.OUTLINE_RED}
-                  onClick={handleOpenDrawerMenuMobile}
-                />
-              </Col>
-            </MediaQuery>
+            {/*<MediaQuery maxWidth={991}>*/}
+            {/*  <Col>*/}
+            {/*    <Button*/}
+            {/*      iconName={EIconName.Menu}*/}
+            {/*      iconColor={EIconColor.RADICAL_RED}*/}
+            {/*      styleType={EButtonStyleType.OUTLINE_RED}*/}
+            {/*      onClick={handleOpenDrawerMenuMobile}*/}
+            {/*    />*/}
+            {/*  </Col>*/}
+            {/*</MediaQuery>*/}
           </Row>
         </div>
       </div>
 
-      <MediaQuery maxWidth={991}>
-        <DrawerMenuMobile
-          isLogged={isLogged}
-          dataLocation={dataLocation}
-          {...drawerMenuMobileState}
-          onClose={handleCloseDrawerMenuMobile}
-          onLogout={(): void => setIsLogged(false)}
-          onLogin={(): void => setIsLogged(true)}
-        />
-      </MediaQuery>
+      {/*<MediaQuery maxWidth={991}>*/}
+      {/*  <DrawerMenuMobile*/}
+      {/*    isLogged={isLogged}*/}
+      {/*    dataLocation={dataLocation}*/}
+      {/*    {...drawerMenuMobileState}*/}
+      {/*    onClose={handleCloseDrawerMenuMobile}*/}
+      {/*    onLogout={(): void => setIsLogged(false)}*/}
+      {/*    onLogin={(): void => setIsLogged(true)}*/}
+      {/*  />*/}
+      {/*</MediaQuery>*/}
     </header>
   );
 };

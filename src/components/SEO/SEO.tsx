@@ -7,10 +7,10 @@ import { TSEOProps } from './SEO.types.d';
 
 const SEO: React.FC<TSEOProps> = ({ title, description, image, keywords, url, favicon }) => {
   const data = {
-    favicon: `${env.rootUrl}/static/images/favicon.svg`,
-    image: `${env.rootUrl}/static/images/logo.svg`,
-    title: 'KOLv2',
-    description: '',
+    favicon: `${env.rootUrl}/static/images/favicon.png`,
+    image: `${env.rootUrl}/static/images/thumbnail.png`,
+    title: 'KingStudy',
+    description: 'KingStudy là đơn vị tư vấn, kết nối du học với 10 năm kinh nghiệm. Khi đến với King Study, bạn sẽ được hỗ trợ về thông tin về du học, học bổng và hướng dẫn hồ ...',
     keywords: '',
     url: env.rootUrl,
   };
