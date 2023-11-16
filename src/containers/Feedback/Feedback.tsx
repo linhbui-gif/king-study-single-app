@@ -4,7 +4,7 @@ import Carousels from "@/components/Carousels";
 import env from "@/env";
 import Modal from "@/components/Modal";
 
-const Feedback: React.FC = ({ loading, data }:any) => {
+const Feedback = ({ loading, data }:any) => {
   const dataContent = data?.items
   const [open, setOpen] = useState<any>(false);
   const [iframeLink, setIframeLink] = useState('');
