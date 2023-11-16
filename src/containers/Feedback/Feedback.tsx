@@ -69,7 +69,6 @@ const Feedback: React.FC = ({ loading, data }:any) => {
             src={iframeLink}
             frameBorder={0}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen=""
             />
        </Modal>
       )}
