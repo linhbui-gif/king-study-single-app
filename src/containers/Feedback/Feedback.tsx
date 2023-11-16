@@ -62,7 +62,7 @@ const Feedback: React.FC = ({ loading, data }:any) => {
   return (
     <>
       {open && (
-       <Modal className={"Modal-feedback"} title={"Feedback"} centered visible={open} footer={false} onCancel={() => setOpen(false)} width={1000}>
+       <Modal className={"Modal-feedback"} title={"Feedback"} centered visible={open} onCancel={() => setOpen(false)} width={1000}>
             <iframe
             width="100%"
             height={500}
