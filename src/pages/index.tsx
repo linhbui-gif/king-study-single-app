@@ -134,9 +134,8 @@ const Home = ({  }:any) => {
           onSearch={onSearch}
           loading={loadingSchool}
         />
-        {schools.length > 0 ? (
-          <SchoolList data={schools} loading={loadingSchool} />
-          ) : (
+        <SchoolList data={schools} loading={loadingSchool} />
+        {schools.length === 0 && (
           <>
             <About loading={loading} data={data}/>
             <Contact loading={loading} data={data}/>
@@ -146,7 +145,7 @@ const Home = ({  }:any) => {
             <Partner loading={loading} data={data} />
             <Feedback loading={loading} data={data} />
           </>
-        )}
+          )}
       </div>
     </div>
   );
