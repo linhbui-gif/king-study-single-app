@@ -106,9 +106,6 @@ const Home = ({  }:any) => {
         setLoadingSchool(false)
         setSchool(response?.data?.data)
         showNotification(ETypeNotification.SUCCESS, 'Có' + ' ' + response?.count + ' truờng được tìm thấy','Kết quả tìm kiếm')
-        if(response?.data?.data.length === 0){
-          showNotification(ETypeNotification.INFO, 'Không tìm thấy trường phù hợp','Kết quả tìm kiếm')
-        }
       }
     } catch (error:any) {
       showNotification(ETypeNotification.ERROR, error?.message,'Có lỗi xảy ra!')
@@ -137,8 +134,9 @@ const Home = ({  }:any) => {
           onSearch={onSearch}
           loading={loadingSchool}
         />
-        <SchoolList data={schools} loading={loadingSchool} />
-        {schools.length === 0 && (
+        {schools.length > 0 ? (
+          <SchoolList data={schools} loading={loadingSchool} />
+          ) : (
           <>
             <About loading={loading} data={data}/>
             <Contact loading={loading} data={data}/>
